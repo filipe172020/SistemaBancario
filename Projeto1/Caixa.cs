@@ -11,16 +11,17 @@ namespace Projeto1
     {
         public string _name;
         public double _number;
-        public bool _deposit;
+        public char _deposit;
         public double _money;
         public double _balance;
+       
 
         public Caixa()
         {
 
         }
 
-        public Caixa(string nome, double numero, bool deposito, double dinheiro, double saldo)
+        public Caixa(string nome, double numero, char deposito, double dinheiro, double saldo)
         {
             _name = nome; _number = numero; _deposit = deposito; _money = dinheiro; _balance = saldo;
         }
@@ -32,7 +33,7 @@ namespace Projeto1
 
         public void Sacar(double dinheiro)
         {
-            _money -= dinheiro - 5.0;
+            _money -= dinheiro + 5.0;            
         }
 
         public double SaldoFinal()

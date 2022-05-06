@@ -19,15 +19,14 @@ namespace Projeto1
             Console.Write("Titular da conta: ");
             x._name = Console.ReadLine();
             Console.Write("Haverá depósito inicial? ");
-            x._deposit = bool.Parse(Console.ReadLine());
+            x._deposit = char.Parse(Console.ReadLine());
 
 
 
-            if (x._deposit == false)
-            { Console.WriteLine("Dados da conta: " + x); }
-
-            else
+            if (x._deposit == 's' || x._deposit == 'S')
             {
+                Console.WriteLine("Dados da conta: " + x);
+
                 Console.Write("Entre com o valor do depósito inicial: ");
 
                 double depositar = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
@@ -41,6 +40,11 @@ namespace Projeto1
                 double tirar = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                 x.Sacar(tirar);
                 Console.WriteLine("Dados atualizados: " + x);
+            }
+
+            else
+            {
+                Console.WriteLine("Dados da conta: " + x);
 
             }
 
